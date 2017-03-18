@@ -1,162 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    android:id="@+id/clCoordinatorLayout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clCoordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    >
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/main.appbar"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:theme="@style/AppTheme.Dark"
         android:fitsSystemWindows="true"
-        >
+        android:theme="@style/AppTheme.Dark">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/main.collapsing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
-            >
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
                 android:id="@+id/main.backdrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
                 android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
                 android:src="@drawable/shoes"
-                app:layout_collapseMode="parallax"
-                />
+                app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:theme="@style/AppTheme.Dark"
-                app:layout_collapseMode="pin"
-                />
+                app:layout_collapseMode="pin" />
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        >
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:lineSpacingExtra="8dp"
-                android:text="Product Description goes over here talking about the product in different ways and what not and such "
-                android:padding="@dimen/activity_horizontal_margin"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="View Details on Amazon"
-                android:layout_margin="16dp"
-                android:backgroundTint="@color/primaryColor"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvPriceText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/tvPrice"
-                    android:layout_margin="8dp"
-                    android:textSize="20dp"
-                    android:text="Price:"/>
+                    android:lineSpacingExtra="8dp"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:text="Product Description goes over here talking about the product in different ways and what not and such "
+                    android:textSize="20sp" />
 
-
-                <TextView
-                    android:id="@+id/tvPrice"
-                    android:layout_width="wrap_content"
+                <Button
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_margin="8dp"
-                    android:textSize="22dp"
-                    android:textColor="@color/flatDarkGreen"
-                    android:text="$20.45"/>
+                    android:layout_margin="16dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:text="View Details on Amazon" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
 
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tvPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_toLeftOf="@+id/tvPrice"
+                        android:text="Price:"
+                        android:textSize="20dp" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="8dp"
+                        android:text="$20.45"
+                        android:textColor="@color/flatDarkGreen"
+                        android:textSize="22dp" />
 
 
-                <TextView
-                    android:id="@+id/tvTargetPriceText"
-                    android:layout_width="wrap_content"
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/tvTargetPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_toLeftOf="@+id/tvTargetPrice"
+                        android:text="Target Price:"
+                        android:textSize="20dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvTargetPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="8dp"
+                        android:text="$20.45"
+                        android:textColor="@color/flatDarkGreen"
+                        android:textSize="22dp" />
+
+
+                </RelativeLayout>
+
+                <com.rey.material.widget.Slider
+                    style="@style/Material.Widget.Slider"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/tvTargetPrice"
                     android:layout_margin="8dp"
-                    android:textSize="20dp"
-                    android:text="Target Price:"/>
+                    android:gravity="center"
+                    app:sl_maxValue="100"
+                    app:sl_minValue="0"
+                    app:sl_primaryColor="@color/flatDarkGreen"
+                    app:sl_secondaryColor="@color/pastelGreen"
+                    app:sl_value="50" />
 
-
-                <TextView
-                    android:id="@+id/tvTargetPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_margin="8dp"
-                    android:textSize="22dp"
-                    android:textColor="@color/flatDarkGreen"
-                    android:text="$20.45"/>
+            </LinearLayout>
 
 
 
-            </RelativeLayout>
-
-            <com.rey.material.widget.Slider
-                style="@style/Material.Widget.Slider"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                app:sl_primaryColor="@color/flatDarkGreen"
-                app:sl_secondaryColor="@color/pastelGreen"
-                android:gravity="center"
-                app:sl_minValue="0"
-                app:sl_maxValue="100"
-                app:sl_value="50"/>
-
-        </LinearLayout>
+        </RelativeLayout>
 
 
 
     </android.support.v4.widget.NestedScrollView>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fabFloatingActionButton"
+    <Button
+        android:id="@+id/btnAddFavorite"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:theme="@style/AppTheme.Dark"
-        android:src="@drawable/ic_add_white_24dp"
-        app:layout_anchor="@id/main.appbar"
-        app:layout_anchorGravity="bottom|right|end"
-        />
+        android:backgroundTint="@color/flatPurple"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:text="Add To Favorites"/>
 </android.support.design.widget.CoordinatorLayout>

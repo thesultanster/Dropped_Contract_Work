@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.tegabet.dropped.data_layer.Product;
@@ -40,8 +41,8 @@ public class ProductActivity extends AppCompatActivity {
 
         clCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.clCoordinatorLayout);
 
-        FloatingActionButton fabFloatingActionButton = (FloatingActionButton) findViewById(R.id.fabFloatingActionButton);
-        fabFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+        Button btnAddFavorite = (Button) findViewById(R.id.btnAddFavorite);
+        btnAddFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FavoriteProductService.getInstance().addFavorite(product);
