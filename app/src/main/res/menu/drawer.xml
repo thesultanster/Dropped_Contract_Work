@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/amazon"
+            android:checked="false"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="Amazon.com" />
+
+        <item
+            android:id="@+id/rate"
+            android:checked="false"
+            android:icon="@drawable/ic_star_rate_black_18dp"
+            android:title="Rate This App" />
+
+        <item
+            android:id="@+id/feedback"
+            android:checked="false"
+            android:icon="@drawable/ic_feedback_black_18dp"
+            android:title="Feedback" />
+
+        <item
+            android:id="@+id/share"
+            android:checked="false"
+            android:icon="@drawable/ic_share_black_18dp"
+            android:title="Share" />
+
+
+    </group>
+
+    <group
+        android:id="@+id/second"
+        android:checkableBehavior="single">
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navi_item_create_notifications_sound"
+
+            android:title="Receive Hot Deals"
+            app:actionLayout="@layout/menu_switch"
+            android:icon="@drawable/ic_attach_money_black_18dp"
+            app:showAsAction="always" />
+
+    </group>
+</menu>
